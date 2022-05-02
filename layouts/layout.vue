@@ -32,3 +32,11 @@
 		</footer>
 	</div>
 </template>
+
+<script>
+export default {
+	mounted() {
+		feather.replace();
+	},
+};
+</script>
