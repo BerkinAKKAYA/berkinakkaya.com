@@ -1,1 +1,1 @@
-Deployed on [Vercel](https://berkinakkaya-55xh50ek0-berkinakkaya.vercel.app)
+Deployed on [Vercel](https://berkinakkaya-berkinakkaya.vercel.app)
