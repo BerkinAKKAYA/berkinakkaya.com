@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
-$primary-color: #0a192f;
-$secondary-color: #64ffda;
+$primary-color: hsl(216, 65%, 11%);
+$secondary-color: hsl(166, 100%, 70%);
 
-* {
+*, *::before, *::after {
 	transition: .3s ease;
 }
 
-body {
+body, p {
 	background-color: $primary-color;
 	color: white;
 	font-family: 'Fira Code', monospace;

@@ -2,13 +2,9 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-	typescript: {
-		shim: false
-	},
-	css: [
-		'@/layouts/global.scss'
-	],
+	typescript: { shim: false },
 	modules: ['@nuxtjs/tailwindcss'],
+	css: ['@/layouts/global.scss'],
 	vite: {
 		server: {
 			watch: {

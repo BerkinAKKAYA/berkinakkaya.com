@@ -6,8 +6,8 @@
 			</NuxtLink>
 
 			<nav class="flex justify-between gap-8">
-				<a class="opacity-50 hover:opacity-100" href="#">Blog</a>
-				<a class="opacity-50 hover:opacity-100" href="#">CV</a>
+				<a href="#">Blog</a>
+				<a href="#">CV</a>
 			</nav>
 		</div>
 
