@@ -2,10 +2,13 @@
 	<NuxtLayout name="layout">
 		<div id="hero" class="text-center mt-24 md:mt-32 sm:text-left">
 			<small class="text-lg opacity-75 color-secondary">Hi, I Am</small>
-			<h1 class="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl mt-2 mb-6">
+			<h1 class="text-4xl sm:text-5xl lg:text-6xl mt-2 mb-6 primary-white">
 				<b>Berkin AKKAYA</b>
 			</h1>
-			<p class="text-lg leading-8 about-text" style="max-width: 620px">
+			<p
+				class="text-base md:text-lg leading-8 about-text"
+				style="max-width: 620px"
+			>
 				I am a <b class="color-secondary">Front-End Developer</b>. I also
 				developed <a href="#">mobile games</a>,
 				<a href="#">productivity apps</a>, <a href="#">npm packages</a>,
@@ -42,7 +45,7 @@ export default {
 	margin-inline: auto;
 
 	.about-text a {
-		color: hsl(216, 65%, 85%);
+		color: var(--primary-white);
 		position: relative;
 		white-space: nowrap;
 
@@ -55,7 +58,7 @@ export default {
 			right: 0;
 			bottom: -1px;
 			transform: rotate(-1.2deg);
-			background: hsl(216, 65%, 85%);
+			background: var(--primary-white);
 			opacity: 0.2;
 		}
 

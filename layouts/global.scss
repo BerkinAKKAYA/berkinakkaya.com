@@ -1,18 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/sf-mono');
 
-$primary-color: hsl(216, 65%, 11%);
-$secondary-color: hsl(166, 100%, 70%);
+:root {
+	--primary-color: hsl(216, 65%, 11%);
+	--secondary-color: hsl(166, 100%, 70%);
+	--primary-white: hsl(216, 65%, 90%);
+}
 
 *, *::before, *::after {
 	transition: .3s ease;
 }
 
 body, p {
-	background-color: $primary-color;
+	background-color: var(--primary-color);
 	color: white;
-	font-family: 'Fira Code', monospace;
+	font-family: 'SF Mono', monospace;
+	cursor: default;
 }
 
 .color-secondary {
-	color: $secondary-color;
+	color: var(--secondary-color);
+}
+
+.primary-white {
+	color: var(--primary-white);
 }
