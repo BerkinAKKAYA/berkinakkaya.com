@@ -1,17 +1,6 @@
 <template>
 	<div>
-		<header
-			class="fixed left-0 right-0 top-0 flex items-center justify-between px-24"
-		>
-			<NuxtLink to="/">
-				<h1 class="text-xl"><b>berkinakkaya.dev</b></h1>
-			</NuxtLink>
-
-			<nav class="flex justify-between gap-8">
-				<a href="#">Blog</a>
-				<a href="#">CV</a>
-			</nav>
-		</header>
+		<Header />
 
 		<main>
 			<slot />
