@@ -5,11 +5,19 @@ export default defineNuxtConfig({
 	typescript: { shim: false },
 	modules: ['@nuxtjs/tailwindcss'],
 	css: ['@/layouts/global.scss'],
-	vite: {
-		server: {
-			watch: {
-				usePolling: true
-			}
-		},
+	// vite: {
+	// 	server: {
+	// 		watch: {
+	// 			usePolling: true
+	// 		}
+	// 	},
+	// },
+	layoutTransition: {
+		name: "layout",
+		mode: ""
 	},
+	pageTransition: {
+		name: "default",
+		mode: ""
+	}
 })

@@ -1,39 +1,39 @@
 <template>
 	<NuxtLayout name="layout">
-		<div id="hero" class="text-center mt-24 md:mt-32 sm:text-left">
-			<small class="text-lg opacity-75 color-secondary">Hi, I Am</small>
-			<h1 class="text-4xl sm:text-5xl lg:text-6xl mt-2 mb-6 primary-white">
-				<b>Berkin AKKAYA</b>
-			</h1>
-			<p
-				class="text-base md:text-lg leading-8 about-text"
-				style="max-width: 620px"
-			>
-				I am a <b class="color-secondary">Front-End Developer</b>. I also
-				developed <a href="#">mobile games</a>,
-				<a href="#">productivity apps</a>, <a href="#">npm packages</a>,
-				<a href="#">cli tools</a> before.
-			</p>
+		<div id="hero" class="text-center sm:text-left">
+			<div class="inner">
+				<small class="text-lg opacity-75 color-secondary">Hi, I Am</small>
+				<h1 class="text-4xl sm:text-5xl lg:text-6xl mt-2 mb-6 primary-white">
+					<b>Berkin AKKAYA</b>
+				</h1>
+				<p class="text-lg about-text mb-2">
+					I am a <b class="color-secondary">Front-End Developer</b>. I also
+					developed <a href="#">mobile games</a>,
+					<a href="#">productivity apps</a>, <a href="#">npm packages</a>,
+					<a href="#">cli tools</a>
+					before.
+				</p>
 
-			<div class="mt-12 flex gap-12 justify-center sm:justify-start">
-				<a href="https://github.com/berkinakkaya" target="_blank">
-					<VueFeather type="github" stroke="white" size="64"></VueFeather>
-				</a>
-				<a href="https://twitter.com/berkinakkaya" target="_blank">
-					<VueFeather type="twitter" stroke="white" size="64"></VueFeather>
-				</a>
-				<a href="https://linkedin.com/in/berkinakkaya" target="_blank">
-					<VueFeather type="linkedin" stroke="white" size="64"></VueFeather>
-				</a>
-			</div>
-		</div>
-	</NuxtLayout>
+				<div class="mt-12 flex gap-12 justify-center sm:justify-start">
+					<a href="https://github.com/berkinakkaya" target="_blank">
+						<VueFeather type="github" stroke="white" size="64"></VueFeather>
+					</a>
+					<a href="https://twitter.com/berkinakkaya" target="_blank">
+						<VueFeather type="twitter" stroke="white" size="64"></VueFeather>
+					</a>
+					<a href="https://linkedin.com/in/berkinakkaya" target="_blank">
+						<VueFeather type="linkedin" stroke="white" size="64"></VueFeather>
+					</a>
+				</div>
+			</div></div
+	></NuxtLayout>
 </template>
 
 <script>
 import VueFeather from "vue-feather";
 
 export default {
+	transition: "intro",
 	components: { VueFeather },
 };
 </script>
@@ -41,8 +41,7 @@ export default {
 <style lang="scss">
 #hero {
 	width: 570px;
-	max-width: 100%;
-	margin-inline: auto;
+	max-width: 100vw;
 
 	.about-text a {
 		color: var(--primary-white);

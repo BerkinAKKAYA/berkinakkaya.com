@@ -1,6 +1,8 @@
 <template>
-	<div class="mx-12 md:mx-36 my-12">
-		<div class="flex justify-between items-center">
+	<div>
+		<header
+			class="fixed left-0 right-0 top-0 flex items-center justify-between px-24"
+		>
 			<NuxtLink to="/">
 				<h1 class="text-xl"><b>berkinakkaya.dev</b></h1>
 			</NuxtLink>
@@ -9,34 +11,54 @@
 				<a href="#">Blog</a>
 				<a href="#">CV</a>
 			</nav>
-		</div>
+		</header>
 
-		<slot />
+		<main>
+			<slot />
+		</main>
 
 		<footer
 			class="
 				fixed
-				left-1
-				right-1
-				bottom-12
+				left-0
+				right-0
+				bottom-0
 				flex
 				justify-center
 				items-center
 				gap-10
 			"
 		>
-			<button>About</button>
-			<button>Experience</button>
-			<button>Work</button>
-			<button>Contact</button>
+			<NuxtLink to="/about">About</NuxtLink>
+			<NuxtLink to="/experience">Experience</NuxtLink>
+			<NuxtLink to="/work">Work</NuxtLink>
+			<NuxtLink to="/contact">Contact</NuxtLink>
 		</footer>
 	</div>
 </template>
 
 <script>
-export default {
-	mounted() {
-		feather.replace();
-	},
-};
+export default {};
 </script>
+
+<style lang="scss">
+header {
+	height: 120px;
+}
+
+main {
+	height: calc(100vh - 180px);
+	margin-top: 120px;
+	display: grid;
+	place-items: center;
+}
+
+footer {
+	backdrop-filter: blur(5px);
+	height: 60px;
+
+	button {
+		text-shadow: 2px 2px 6px rgba($color: #000, $alpha: 0.6);
+	}
+}
+</style>
