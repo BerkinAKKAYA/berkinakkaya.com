@@ -6,10 +6,6 @@
 	--primary-white: hsl(216, 65%, 90%);
 }
 
-*, *::before, *::after {
-	transition: .3s ease;
-}
-
 body, p {
 	background-color: var(--primary-color);
 	color: white;
@@ -48,7 +44,6 @@ a.link {
 	color: var(--primary-white);
 }
 
-
 .page-enter main,
 .page-leave-to main,
 .page-enter-active main,
@@ -56,3 +51,41 @@ a.link {
 	transform: scale(0) rotate(-15deg);
 	transition: .5s ease-out;
 }
+
+.container {
+	max-width: 600px;
+
+	p {
+		text-align: justify;
+	}
+}
+
+.page-header {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+
+	&::after {
+		content: "";
+		flex: 1;
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: var(--primary-white);
+		opacity: 0.1;
+	}
+}
+
+svg {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	animation: draw 8s linear forwards;
+}
+
+@keyframes draw {
+	to { stroke-dashoffset: 0 }
+}
+
+.draw-delay-500 svg { animation-delay: 800ms }
+.draw-delay-1000 svg { animation-delay: 1600ms }
+.draw-delay-1500 svg { animation-delay: 2400ms }

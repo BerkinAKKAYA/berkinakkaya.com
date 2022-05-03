@@ -2,27 +2,58 @@
 	<NuxtLayout name="layout">
 		<div id="hero" class="text-center sm:text-left">
 			<div class="inner">
-				<small class="text-lg opacity-75 color-secondary">Hi, I Am</small>
-				<h1 class="text-4xl sm:text-5xl lg:text-6xl mt-2 mb-6 primary-white">
+				<small
+					class="text-lg opacity-75 color-secondary reveal"
+					style="animation-delay: 0.1s"
+					>Hi, I Am</small
+				>
+				<h1
+					class="
+						text-4xl
+						sm:text-5xl
+						lg:text-6xl
+						mt-2
+						mb-6
+						primary-white
+						reveal
+					"
+					style="animation-delay: 0.5s"
+				>
 					<b>Berkin AKKAYA</b>
 				</h1>
-				<p class="text-lg about-text mb-2">
+				<p class="text-lg about-text mb-2 reveal" style="animation-delay: 1s">
 					I am a <b class="color-secondary">Front-End Developer</b>. I also
-					developed <a href="#">mobile games</a>,
-					<a href="#">productivity apps</a>, <a href="#">npm packages</a>,
-					<a href="#">cli tools</a>
+					developed <NuxtLink to="/work?filter=games">mobile games</NuxtLink>,
+					<NuxtLink to="/work?filter=apps">productivity apps</NuxtLink>,
+					<NuxtLink to="/work?filter=npm">npm packages</NuxtLink>,
+					<NuxtLink to="/work?filter=cli">cli tools</NuxtLink>
 					before.
 				</p>
 
 				<div class="mt-12 flex gap-12 justify-center sm:justify-start">
 					<a href="https://github.com/berkinakkaya" target="_blank">
-						<VueFeather type="github" stroke="white" size="64"></VueFeather>
+						<VueFeather
+							type="github"
+							stroke="white"
+							size="64"
+							class="draw-delay-500"
+						></VueFeather>
 					</a>
 					<a href="https://twitter.com/berkinakkaya" target="_blank">
-						<VueFeather type="twitter" stroke="white" size="64"></VueFeather>
+						<VueFeather
+							type="twitter"
+							stroke="white"
+							size="64"
+							class="draw-delay-1000"
+						></VueFeather>
 					</a>
 					<a href="https://linkedin.com/in/berkinakkaya" target="_blank">
-						<VueFeather type="linkedin" stroke="white" size="64"></VueFeather>
+						<VueFeather
+							type="linkedin"
+							stroke="white"
+							size="64"
+							class="draw-delay-1500"
+						></VueFeather>
 					</a>
 				</div>
 			</div></div
@@ -50,23 +81,22 @@ export default {
 
 		&::after {
 			content: "";
-			width: 100%;
 			height: 2px;
 			position: absolute;
 			left: 0;
 			right: 0;
 			bottom: -1px;
-			transform: rotate(-1.2deg);
-			background: var(--primary-white);
-			opacity: 0.2;
+			transform: rotate(-1deg);
+			border-bottom: 2px dashed var(--primary-white);
+			opacity: 0.3;
+			transition: 0.3s ease;
 		}
 
 		&:hover::after {
 			transform: rotate(0);
-			width: calc(100% + 12px);
-			left: -6px;
-			bottom: -3px;
+			border-bottom: 2px solid var(--primary-white);
 			opacity: 0.6;
+			bottom: -3px;
 		}
 	}
 }
@@ -74,10 +104,24 @@ export default {
 .feather {
 	stroke: #66ffdb;
 	stroke-width: 1;
+	transition: 0.5s ease;
 
 	&:hover {
-		stroke-width: 2;
+		stroke-width: 1.2;
 		stroke: white;
+	}
+}
+
+.reveal {
+	opacity: 0;
+	margin-left: -50px;
+	animation: reveal 800ms ease forwards;
+}
+
+@keyframes reveal {
+	to {
+		margin-left: 0;
+		opacity: 1;
 	}
 }
 </style>
