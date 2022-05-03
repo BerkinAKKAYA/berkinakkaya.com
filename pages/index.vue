@@ -66,7 +66,6 @@
 import VueFeather from "vue-feather";
 
 export default {
-	transition: "intro",
 	components: { VueFeather },
 };
 </script>
@@ -108,19 +107,6 @@ export default {
 	&:hover {
 		stroke-width: 1.2;
 		stroke: white;
-	}
-}
-
-.reveal {
-	opacity: 0;
-	margin-left: -50px;
-	animation: reveal 800ms ease forwards;
-}
-
-@keyframes reveal {
-	to {
-		margin-left: 0;
-		opacity: 1;
 	}
 }
 </style>
