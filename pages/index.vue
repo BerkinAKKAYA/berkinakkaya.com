@@ -1,6 +1,6 @@
 <template>
 	<NuxtLayout name="layout">
-		<div id="hero" class="text-center sm:text-left">
+		<div id="hero" class="container text-center sm:text-left">
 			<div class="inner">
 				<small
 					class="text-lg opacity-75 color-secondary reveal"
@@ -9,9 +9,9 @@
 				>
 				<h1
 					class="
-						text-4xl
-						sm:text-5xl
-						lg:text-6xl
+						text-3xl
+						sm:text-4xl
+						lg:text-5xl
 						mt-2
 						mb-6
 						primary-white
@@ -30,7 +30,9 @@
 					before.
 				</p>
 
-				<div class="mt-12 flex gap-12 justify-center sm:justify-start">
+				<div
+					class="mt-12 flex gap-12 justify-center sm:justify-start flex-wrap"
+				>
 					<a href="https://github.com/berkinakkaya" target="_blank">
 						<VueFeather
 							type="github"
@@ -71,9 +73,6 @@ export default {
 
 <style lang="scss">
 #hero {
-	width: 570px;
-	max-width: 100vw;
-
 	.about-text a {
 		color: var(--primary-white);
 		position: relative;

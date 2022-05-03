@@ -1,6 +1,6 @@
 <template>
 	<NuxtLayout name="layout">
-		<div class="container px-8">
+		<div class="container">
 			<h1 class="text-2xl page-header"><b>About Me</b></h1>
 			<p class="mt-6">
 				I am a front-end developer located in Istanbul/Turkey. I'm a

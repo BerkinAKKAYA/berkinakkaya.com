@@ -1,6 +1,6 @@
 <template>
 	<NuxtLayout name="layout">
-		<div class="container px-8">
+		<div class="container">
 			<h1 class="text-2xl page-header">Study and Experiences</h1>
 
 			<p class="mt-8">
