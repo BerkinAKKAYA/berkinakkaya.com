@@ -1,7 +1,5 @@
 <template>
-	<header
-		class="fixed left-0 right-0 top-0 flex items-center justify-between px-24"
-	>
+	<header class="flex items-center justify-between px-16">
 		<NuxtLink to="/">
 			<h1 class="text-xl"><b>berkinakkaya.dev</b></h1>
 		</NuxtLink>
@@ -12,3 +10,9 @@
 		</nav>
 	</header>
 </template>
+
+<style lang="scss" scoped>
+header {
+	height: 100px;
+}
+</style>

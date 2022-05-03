@@ -6,48 +6,43 @@
 			<slot />
 		</main>
 
-		<footer
-			class="
-				fixed
-				left-0
-				right-0
-				bottom-0
-				flex
-				justify-center
-				items-center
-				gap-10
-			"
-		>
-			<NuxtLink to="/about">About</NuxtLink>
-			<NuxtLink to="/experience">Experience</NuxtLink>
-			<NuxtLink to="/work">Work</NuxtLink>
-			<NuxtLink to="/contact">Contact</NuxtLink>
+		<footer class="text-center mb-10">
+			<div class="flex justify-center items-center gap-10">
+				<NuxtLink to="/about">About</NuxtLink>
+				<NuxtLink to="/experience">Experience</NuxtLink>
+				<NuxtLink to="/work">Work</NuxtLink>
+				<NuxtLink to="/contact">Contact</NuxtLink>
+			</div>
+
+			<div class="mt-6">
+				Made with
+				<VueFeather type="heart" stroke="white" size="14"></VueFeather>
+				by Berkin AKKAYA
+			</div>
+
+			<small class="mt-1 primary-white opacity-80">
+				Inspired by the portfolio of
+				<a href="https://brittanychiang.com" target="_blank" class="link"
+					>Brittany Chiang</a
+				>.
+			</small>
 		</footer>
 	</div>
 </template>
 
 <script>
-export default {};
+import VueFeather from "vue-feather";
+
+export default {
+	components: { VueFeather },
+};
 </script>
 
 <style lang="scss">
-header {
-	height: 120px;
-}
-
 main {
-	height: calc(100vh - 180px);
-	margin-top: 120px;
 	display: grid;
 	place-items: center;
-}
-
-footer {
-	backdrop-filter: blur(5px);
-	height: 60px;
-
-	button {
-		text-shadow: 2px 2px 6px rgba($color: #000, $alpha: 0.6);
-	}
+	min-height: calc(100vh - 360px);
+	margin-block: 60px;
 }
 </style>
