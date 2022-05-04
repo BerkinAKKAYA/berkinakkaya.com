@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/sf-mono');
+@import url('//fonts.cdnfonts.com/css/sf-mono');
 
 :root {
 	--primary-color: hsl(216, 65%, 11%);
@@ -52,11 +52,6 @@ a.link {
 	transition: .5s ease-out;
 }
 
-.container {
-	max-width: 600px;
-	padding-inline: 36px;
-}
-
 .page-header {
 	display: flex;
 	align-items: center;
@@ -80,7 +75,7 @@ a.link {
 	}
 }
 
-svg {
+.draw svg {
 	stroke-dasharray: 1000;
 	stroke-dashoffset: 1000;
 	animation: draw 8s linear forwards;

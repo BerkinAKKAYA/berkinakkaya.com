@@ -1,6 +1,6 @@
 <template>
 	<NuxtLayout name="layout">
-		<div id="hero" class="container text-center sm:text-left">
+		<div id="hero" clzaass="text-center sm:text-left">
 			<div class="inner">
 				<small
 					class="text-lg opacity-75 color-secondary reveal"
@@ -31,30 +31,37 @@
 				</p>
 
 				<div
-					class="mt-12 flex gap-12 justify-center sm:justify-start flex-wrap"
+					class="
+						mt-12
+						flex
+						gap-8
+						justify-center
+						sm:gap-12 sm:justify-start
+						flex-wrap
+					"
 				>
 					<a href="https://github.com/berkinakkaya" target="_blank">
 						<VueFeather
 							type="github"
 							stroke="white"
-							size="64"
-							class="draw-delay-500"
+							size="52"
+							class="draw draw-delay-500"
 						></VueFeather>
 					</a>
 					<a href="https://twitter.com/berkinakkaya" target="_blank">
 						<VueFeather
 							type="twitter"
 							stroke="white"
-							size="64"
-							class="draw-delay-1000"
+							size="52"
+							class="draw draw-delay-1000"
 						></VueFeather>
 					</a>
 					<a href="https://linkedin.com/in/berkinakkaya" target="_blank">
 						<VueFeather
 							type="linkedin"
 							stroke="white"
-							size="64"
-							class="draw-delay-1500"
+							size="52"
+							class="draw draw-delay-1500"
 						></VueFeather>
 					</a>
 				</div>
@@ -72,6 +79,11 @@ export default {
 
 <style lang="scss">
 #hero {
+	@media (max-width: 640px) {
+		max-width: 410px;
+		text-align: center;
+	}
+
 	.about-text a {
 		color: var(--primary-white);
 		position: relative;

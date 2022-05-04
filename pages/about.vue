@@ -1,6 +1,6 @@
 <template>
 	<NuxtLayout name="layout">
-		<div class="container">
+		<div>
 			<h1 class="text-2xl page-header reveal"><b>About Me</b></h1>
 			<p class="mt-6 reveal" style="animation-delay: 0.25s">
 				I am a front-end developer located in Istanbul/Turkey. I'm a
@@ -11,11 +11,3 @@
 		</div>
 	</NuxtLayout>
 </template>
-
-<script>
-import VueFeather from "vue-feather";
-
-export default {
-	components: { VueFeather },
-};
-</script>

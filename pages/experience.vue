@@ -1,9 +1,9 @@
 <template>
 	<NuxtLayout name="layout">
-		<div class="container">
+		<div class="holder">
 			<h1 class="text-2xl page-header reveal">Study and Experiences</h1>
 
-			<div class="mt-12 timeline-element reveal" style="animation-delay: 0.4s">
+			<div class="mt-10 timeline-element reveal" style="animation-delay: 0.4s">
 				<div class="year">
 					<b>2017</b>
 					<small class="opacity-50">Age of 16</small>
@@ -17,7 +17,7 @@
 				</p>
 			</div>
 
-			<div class="mt-12 timeline-element reveal" style="animation-delay: 0.7s">
+			<div class="mt-10 timeline-element reveal" style="animation-delay: 0.7s">
 				<div class="year">
 					<b>2018</b>
 					<small class="opacity-50">Age of 17</small>
@@ -38,7 +38,7 @@
 				</p>
 			</div>
 
-			<div class="mt-12 timeline-element reveal" style="animation-delay: 1s">
+			<div class="mt-10 timeline-element reveal" style="animation-delay: 1s">
 				<div class="year">
 					<b><small>June</small> 2019</b>
 					<small class="opacity-50">Age of 18</small>
@@ -52,7 +52,7 @@
 				</p>
 			</div>
 
-			<div class="mt-12 timeline-element reveal" style="animation-delay: 1.2s">
+			<div class="mt-10 timeline-element reveal" style="animation-delay: 1.2s">
 				<div class="year">
 					<b><small>July</small> 2019</b>
 					<small class="opacity-50">Age of 18</small>
@@ -72,7 +72,7 @@
 				</p>
 			</div>
 
-			<div class="mt-12 timeline-element reveal" style="animation-delay: 1.4s">
+			<div class="mt-10 timeline-element reveal" style="animation-delay: 1.4s">
 				<div class="year">
 					<b><small>August</small> 2019</b>
 					<small class="opacity-50">Age of 18</small>
@@ -83,7 +83,7 @@
 				<p>Completed my internship at <b>Gedik Holding</b>.</p>
 			</div>
 
-			<div class="mt-12 timeline-element reveal" style="animation-delay: 1.55s">
+			<div class="mt-10 timeline-element reveal" style="animation-delay: 1.55s">
 				<div class="year">
 					<b><small>April</small> 2020</b>
 					<small class="opacity-50">Age of 19</small>
@@ -101,11 +101,16 @@
 </template>
 
 <style lang="scss">
+.holder {
+	--offset: 30px;
+	width: calc(100% - var(--offset) - 30px);
+}
+
 .timeline-element {
 	display: flex;
 	gap: 10px;
 	align-items: center;
-	margin-left: -40px;
+	margin-left: calc(var(--offset) * -1);
 
 	.year {
 		min-width: 92px;
