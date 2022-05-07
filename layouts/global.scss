@@ -44,12 +44,18 @@ a.link {
 	color: var(--primary-white);
 }
 
-.page-enter main,
-.page-leave-to main,
-.page-enter-active main,
-.page-leave-active main {
-	transform: scale(0) rotate(-15deg);
-	transition: .5s ease-out;
+.page-enter,
+.page-leave-to,
+.page-enter-active,
+.page-leave-active {
+	&, main {
+		transition: .2s ease-out;
+	}
+
+	main {
+		transform: translateX(-50px);
+		opacity: 0;
+	}
 }
 
 .page-header {
