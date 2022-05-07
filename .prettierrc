@@ -1,4 +1,5 @@
 {
 	"useTabs": true,
-	"tabSize": 4
+	"tabSize": 4,
+	"printWidth": 160
 }

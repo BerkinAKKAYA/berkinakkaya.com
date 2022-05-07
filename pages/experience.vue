@@ -11,10 +11,7 @@
 
 				<div class="seperator"></div>
 
-				<p>
-					I quitted high school at 10th grade and continued my education & exam
-					preparation at home.
-				</p>
+				<p>I quitted high school at 10th grade and continued my education & exam preparation at home.</p>
 			</div>
 
 			<div class="mt-10 timeline-element reveal" style="animation-delay: 0.7s">
@@ -27,13 +24,7 @@
 
 				<p>
 					Joined
-					<a
-						class="link"
-						href="https://ldjam.com/users/berkin/games"
-						target="_blank"
-					>
-						Ludum Dare</a
-					>
+					<a class="link" href="https://ldjam.com/users/berkin/games" target="_blank"> Ludum Dare</a>
 					events. Built video games by myself and worked with teams.
 				</p>
 			</div>
@@ -46,10 +37,7 @@
 
 				<div class="seperator"></div>
 
-				<p>
-					Started studying <b>Information Security</b> at
-					<b>Istanbul Gedik University</b>.
-				</p>
+				<p>Started studying <b>Information Security</b> at <b>Istanbul Gedik University</b>.</p>
 			</div>
 
 			<div class="mt-10 timeline-element reveal" style="animation-delay: 1.2s">
@@ -62,13 +50,7 @@
 
 				<p>
 					Published my first game in
-					<a
-						class="link"
-						href="https://play.google.com/store/apps/developer?id=Berkin+Akkaya"
-						target="_blank"
-					>
-						Google Play</a
-					>.
+					<a class="link" href="https://play.google.com/store/apps/developer?id=Berkin+Akkaya" target="_blank"> Google Play</a>.
 				</p>
 			</div>
 
@@ -91,10 +73,7 @@
 
 				<div class="seperator"></div>
 
-				<p>
-					After my internship, i started working at Gedik Holding as a Front-End
-					Developer.
-				</p>
+				<p>After my internship, i started working at Gedik Holding as a Front-End Developer.</p>
 			</div>
 		</div>
 	</NuxtLayout>

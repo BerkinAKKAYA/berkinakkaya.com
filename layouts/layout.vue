@@ -2,11 +2,9 @@
 	<div>
 		<Header />
 
-		<main>
+		<main class="grid my-32 md:my-32 mx-auto">
 			<slot />
 		</main>
-
-		<Footer />
 	</div>
 </template>
 
@@ -20,18 +18,8 @@ export default {
 
 <style lang="scss">
 main {
-	display: grid;
 	place-items: center;
 	width: 600px;
 	max-width: 90vw;
-	max-height: calc(100vh - 340px);
-	height: 100vh;
-	margin: 70px auto 50px auto;
-	overflow: hidden auto;
-
-	@media (max-width: 720px) {
-		margin: 60px auto;
-		max-height: calc(100vh - 300px);
-	}
 }
 </style>
