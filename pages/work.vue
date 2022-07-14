@@ -1,5 +1,7 @@
 <template>
 	<NuxtLayout name="layout">
+		<a href="github.com/berkinakkaya">GitHub</a>
+		<!--
 		<div>
 			<NuxtLink to="/work?filter=a">a</NuxtLink>
 			<NuxtLink to="/work?filter=b">b</NuxtLink>
@@ -8,6 +10,7 @@
 
 			<p>work ({{ filter || "all" }})</p>
 		</div>
+		-->
 	</NuxtLayout>
 </template>
 
