@@ -1,5 +1,5 @@
 <template>
 	<NuxtLayout name="layout">
-		<div>blog</div>
+		<div>coming soon.</div>
 	</NuxtLayout>
 </template>
