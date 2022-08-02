@@ -43,7 +43,8 @@ nav a {
 <template>
 	<header class="flex flex-wrap items-center justify-between px-12 pt-12 md:px-16">
 		<NuxtLink to="/" class="text-lg text-left md:w-full md:text-center md:text-xl">
-			<b>berkinakkaya.dev</b>
+			<b>berkinakkaya</b>
+			<span class="opacity-25">.dev</span>
 		</NuxtLink>
 
 		<div class="md:hidden" @click="showMobileMenu = !showMobileMenu">

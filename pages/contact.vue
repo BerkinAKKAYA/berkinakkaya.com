@@ -1,7 +1,8 @@
 <template>
 	<NuxtLayout name="layout">
-		<p><b>Mail:</b> berkin_akkaya@hotmail.com</p>
-		<p><b>GitHub:</b> github.com/berkinakkaya</p>
+		<div>
+			<p><b>Mail:</b> <a href="mailto:berkin_akkaya@hotmail.com" class="link">berkin_akkaya@hotmail.com</a></p>
+		</div>
 	</NuxtLayout>
 </template>
 

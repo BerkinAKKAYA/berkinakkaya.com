@@ -1,6 +1,9 @@
 <template>
 	<NuxtLayout name="layout">
-		<div>coming soon.</div>
+		<p class="text-center">
+			<span class="opacity-50">This page is a work in progress. For now, you can visit my </span>
+			<b><a href="https://berkinakkaya.medium.com/" target="_blank">Medium</a> page.</b>
+		</p>
 	</NuxtLayout>
 </template>
 
