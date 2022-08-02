@@ -95,6 +95,9 @@
 
 <script>
 export default {
+	head: () => ({
+		title: "Experiences | Berkin Akkaya",
+	}),
 	data: () => ({
 		months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 		experiences: [

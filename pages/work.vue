@@ -26,6 +26,9 @@
 import VueFeather from "vue-feather";
 
 export default {
+	head: () => ({
+		title: "Projects | Berkin Akkaya",
+	}),
 	components: { VueFeather },
 	// data: () => ({
 	// 	filter: "",

@@ -33,6 +33,9 @@
 import VueFeather from "vue-feather";
 
 export default {
+	head: () => ({
+		title: "Berkin Akkaya",
+	}),
 	components: { VueFeather },
 };
 </script>

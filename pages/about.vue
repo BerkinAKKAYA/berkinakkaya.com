@@ -14,3 +14,11 @@
 		</div>
 	</NuxtLayout>
 </template>
+
+<script>
+export default {
+	head: () => ({
+		title: "About | Berkin Akkaya",
+	}),
+};
+</script>

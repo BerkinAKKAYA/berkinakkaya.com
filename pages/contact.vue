@@ -4,3 +4,11 @@
 		<p><b>GitHub:</b> github.com/berkinakkaya</p>
 	</NuxtLayout>
 </template>
+
+<script>
+export default {
+	head: () => ({
+		title: "Contact | Berkin Akkaya",
+	}),
+};
+</script>
