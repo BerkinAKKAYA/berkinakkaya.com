@@ -1,35 +1,3 @@
-<template>
-	<header class="flex flex-wrap items-center justify-between px-12 pt-12 md:px-16">
-		<NuxtLink to="/" class="text-lg text-left md:w-full md:text-center md:text-xl">
-			<b>berkinakkaya.dev</b>
-		</NuxtLink>
-
-		<div class="md:hidden" @click="showMobileMenu = !showMobileMenu">
-			<VueFeather type="menu" stroke="white" size="36"></VueFeather>
-		</div>
-	</header>
-
-	<nav class="justify-center items-center gap-10 mt-10 hidden md:flex">
-		<NuxtLink :class="{ active: $route.name == 'index' }" to="/">Home</NuxtLink>
-		<NuxtLink :class="{ active: $route.name == 'about' }" to="/about">About</NuxtLink>
-		<NuxtLink :class="{ active: $route.name == 'experience' }" to="/experience">Experience</NuxtLink>
-		<NuxtLink :class="{ active: $route.name == 'work' }" to="/work">Projects</NuxtLink>
-		<NuxtLink :class="{ active: $route.name == 'contact' }" to="/contact">Contact</NuxtLink>
-		<NuxtLink :class="{ active: $route.name == 'blog' }" to="/blog">Blog</NuxtLink>
-		<a href="https://berkinakkaya.dev/resume.pdf" target="_blank">Resume</a>
-	</nav>
-
-	<div id="mobile_menu" class="px-12 pt-8 sm:px-24 flex flex-col" :class="{ show: showMobileMenu }" @click="showMobileMenu = !showMobileMenu">
-		<NuxtLink class="reveal text-xl p-6" :class="{ active: $route.name == 'index' }" to="/">Home</NuxtLink>
-		<NuxtLink class="reveal text-xl p-6" :class="{ active: $route.name == 'about' }" to="/about">About</NuxtLink>
-		<NuxtLink class="reveal text-xl p-6" :class="{ active: $route.name == 'experience' }" to="/experience">Experience</NuxtLink>
-		<NuxtLink class="reveal text-xl p-6" :class="{ active: $route.name == 'work' }" to="/work">Projects</NuxtLink>
-		<NuxtLink class="reveal text-xl p-6" :class="{ active: $route.name == 'contact' }" to="/contact">Contact</NuxtLink>
-		<NuxtLink class="reveal text-xl p-6" :class="{ active: $route.name == 'blog' }" to="/blog">Blog</NuxtLink>
-		<a class="reveal text-xl p-6" href="https://berkinakkaya.dev/resume.pdf" target="_blank">Resume</a>
-	</div>
-</template>
-
 <style lang="scss">
 nav a {
 	opacity: 0.3;
@@ -72,6 +40,30 @@ nav a {
 }
 </style>
 
+<template>
+	<header class="flex flex-wrap items-center justify-between px-12 pt-12 md:px-16">
+		<NuxtLink to="/" class="text-lg text-left md:w-full md:text-center md:text-xl">
+			<b>berkinakkaya.dev</b>
+		</NuxtLink>
+
+		<div class="md:hidden" @click="showMobileMenu = !showMobileMenu">
+			<VueFeather type="menu" stroke="white" size="36"></VueFeather>
+		</div>
+	</header>
+
+	<nav class="justify-center items-center gap-10 mt-10 hidden md:flex">
+		<NuxtLink v-for="item in navItems" :key="item.name" :class="{ active: $route.name == item.name }" :to="item.route">
+			{{ item.text }}
+		</NuxtLink>
+	</nav>
+
+	<div id="mobile_menu" class="px-12 pt-8 sm:px-24 flex flex-col" :class="{ show: showMobileMenu }" @click="showMobileMenu = !showMobileMenu">
+		<NuxtLink class="reveal text-xl p-6" v-for="item in navItems" :key="item.name" :class="{ active: $route.name == item.name }" :to="item.route">
+			{{ item.text }}
+		</NuxtLink>
+	</div>
+</template>
+
 <script>
 import VueFeather from "vue-feather";
 
@@ -80,9 +72,14 @@ export default {
 	data: () => ({
 		showMobileMenu: false,
 		activeRoute: "",
+		navItems: [
+			{ route: "/", name: "index", text: "Home" },
+			{ route: "/about", name: "about", text: "About" },
+			{ route: "/experience", name: "experience", text: "Experience" },
+			{ route: "/work", name: "work", text: "Projects" },
+			{ route: "/contact", name: "contact", text: "Contact" },
+			{ route: "/blog", name: "blog", text: "Blog" },
+		],
 	}),
-	mounted() {
-		console.log(this.$route.name);
-	},
 };
 </script>
