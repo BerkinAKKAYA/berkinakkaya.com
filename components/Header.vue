@@ -38,17 +38,79 @@ nav a {
 	a:nth-child(8) { animation-delay: 0.8s; }
 	a:nth-child(9) { animation-delay: 0.9s; }
 }
+
+#menu_icon {
+	width: 60px;
+	height: 45px;
+	position: relative;
+	transform: scale(0.75) rotate(0deg);
+	transition: 0.5s ease-in-out;
+	cursor: pointer;
+
+	@media (max-width: 500px) {
+		transform: scale(0.6);
+	}
+
+	span {
+		display: block;
+		position: absolute;
+		height: 4px;
+		width: 100%;
+		background: var(--secondary-color);
+		border-radius: 9px;
+		opacity: 1;
+		left: 0;
+		transform: rotate(0deg);
+		transition: 0.25s ease-in-out;
+
+		&:nth-child(1) {
+			top: 0px;
+			transform-origin: left center;
+		}
+
+		&:nth-child(2) {
+			top: 18px;
+			transform-origin: left center;
+		}
+
+		&:nth-child(3) {
+			top: 36px;
+			transform-origin: left center;
+		}
+	}
+
+	&.open span {
+		&:nth-child(1) {
+			transform: rotate(45deg);
+			top: -3px;
+			left: 8px;
+		}
+
+		&:nth-child(2) {
+			width: 0%;
+			opacity: 0;
+		}
+
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+			top: 39px;
+			left: 8px;
+		}
+	}
+}
 </style>
 
 <template>
-	<header class="flex flex-wrap items-center justify-between px-12 pt-12 md:px-16">
+	<header class="flex flex-wrap items-center justify-between px-8 pt-12 sm:px-12 md:px-16">
 		<NuxtLink to="/" class="text-lg text-left md:w-full md:text-center md:text-xl">
 			<b>berkinakkaya</b>
 			<span class="opacity-25">.dev</span>
 		</NuxtLink>
 
-		<div class="md:hidden" @click="showMobileMenu = !showMobileMenu">
-			<VueFeather type="menu" stroke="white" size="36"></VueFeather>
+		<div id="menu_icon" class="md:hidden" @click="showMobileMenu = !showMobileMenu" :class="{ open: showMobileMenu }">
+			<span></span>
+			<span></span>
+			<span></span>
 		</div>
 	</header>
 
