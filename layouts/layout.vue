@@ -2,7 +2,7 @@
 	<div>
 		<Header />
 
-		<main class="grid my-32 md:my-32 mx-auto">
+		<main class="grid mt-20 mb-32 mx-auto">
 			<slot />
 		</main>
 	</div>
