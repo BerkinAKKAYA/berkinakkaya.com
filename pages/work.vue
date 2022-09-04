@@ -1,42 +1,38 @@
 <template>
 	<NuxtLayout name="layout">
-		<table class="mb-12">
-			<thead>
-				<tr>
-					<th>Category</th>
-					<th>Name</th>
-					<th>GitHub Link</th>
-					<th>Live Link</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr v-for="project in projects" :key="project.name">
-					<td>{{ project.category }}</td>
-					<td>{{ project.name }}</td>
-					<td>
-						<a target="_blank" :href="project.githubLink" v-if="project.githubLink">GitHub</a>
-					</td>
-					<td><a target="_blank" :href="project.liveLink" v-if="project.liveLink">Live</a></td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="category-navigation mb-4">
+			<NuxtLink to="/work?filter=Game"><button>Games</button></NuxtLink>
+			<NuxtLink to="/work?filter=CLI"><button>CLI Apps</button></NuxtLink>
+			<NuxtLink to="/work?filter=Web"><button>Web Apps</button></NuxtLink>
+			<NuxtLink to="/work?filter=NPM"><button>NPM</button></NuxtLink>
+		</div>
 
-		<p>https://berkinakkaya.itch.io/</p>
+		<p v-if="!filter">Please select a category.</p>
+		<div class="mb-12" v-else>
+			<div v-for="project in projects.filter((x) => x.category === filter)" :key="project.name" class="my-8">
+				<p class="opacity-50 text-sm">{{ project.description }}</p>
+
+				<h3 class="text-lg">
+					<b>{{ project.name }}</b>
+				</h3>
+
+				<div class="mt-3 flex gap-5">
+					<a :href="project.githubLink" target="_blank">
+						<VueFeather type="github" stroke="white" size="30" class="draw"></VueFeather>
+					</a>
+
+					<a :href="project.githubLink" target="_blank">
+						<VueFeather type="external-link" stroke="white" size="30" class="draw"></VueFeather>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<p class="mt-12">https://berkinakkaya.itch.io/</p>
 
 		<a href="https://github.com/berkinakkaya" target="_blank" class="mt-10">
 			<VueFeather type="github" stroke="white" size="72" class="draw draw-delay-500"></VueFeather>
 		</a>
-
-		<!--
-		<div>
-			<NuxtLink to="/work?filter=a">a</NuxtLink>
-			<NuxtLink to="/work?filter=b">b</NuxtLink>
-			<NuxtLink to="/work?filter=c">c</NuxtLink>
-			<NuxtLink to="/work?filter=d">d</NuxtLink>
-
-			<p>work ({{ filter || "all" }})</p>
-		</div>
-		-->
 	</NuxtLayout>
 </template>
 
@@ -49,6 +45,7 @@ export default {
 	}),
 	components: { VueFeather },
 	data: () => ({
+		filter: "",
 		projects: [
 			{
 				name: "Stay In The Shadows",
@@ -101,7 +98,7 @@ export default {
 			{
 				name: "Weather Scraper",
 				category: "CLI",
-				description: "Get monthly forecast via terminal. (scrapes accuweather)",
+				description: "Get monthly forecast via terminal",
 				technologies: ["Python", "Selenium"],
 				githubLink: "https://github.com/BerkinAKKAYA/WeatherScraper",
 				liveLink: null,
@@ -133,7 +130,7 @@ export default {
 			{
 				name: "Focused YouTube",
 				category: "Web",
-				description: "YouTube Client Without Distractions and With Bookmarks",
+				description: "YouTube Client Without Distractions",
 				technologies: ["Svelte", "Firebase"],
 				githubLink: "https://focused-yt.web.app",
 			},
@@ -148,7 +145,7 @@ export default {
 			{
 				name: "Habit Tracker",
 				category: "Web",
-				description: "A digital bullet journal style habit tracker",
+				description: "Bullet Journal style habit tracker",
 				technologies: ["Svelte", "Firebase"],
 				githubLink: "https://github.com/BerkinAKKAYA/HabitTracker",
 				liveLink: "https://habittracker-brkn.web.app",
@@ -195,15 +192,38 @@ export default {
 			},
 		],
 	}),
+	watch: {
+		"$route.query.filter": function (filter) {
+			this.filter = filter;
+		},
+	},
+	created() {
+		this.filter = this.$route.query.filter;
+	},
 };
 </script>
 
 <style lang="scss">
-table {
-	th,
-	td {
-		padding: 5px 15px;
-		text-align: left;
+.category-navigation {
+	max-width: 100%;
+	overflow-x: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 16px;
+
+	button {
+		white-space: nowrap;
+		padding: 8px 16px;
+		margin: 0 8px;
+		border-radius: 8px;
+		background: white;
+		color: black;
 	}
+}
+
+td {
+	padding: 4px 20px;
+	text-align: left;
 }
 </style>
