@@ -1,14 +1,14 @@
 <template>
 	<NuxtLayout name="layout">
 		<div class="category-navigation mb-4">
-			<NuxtLink to="/work?filter=Game"><button>Games</button></NuxtLink>
-			<NuxtLink to="/work?filter=CLI"><button>CLI Apps</button></NuxtLink>
-			<NuxtLink to="/work?filter=Web"><button>Web Apps</button></NuxtLink>
-			<NuxtLink to="/work?filter=NPM"><button>NPM</button></NuxtLink>
+			<NuxtLink v-for="category in filters" :key="category" :to="'/work?filter=' + category">
+				<button :class="filter === category ? 'opacity-100' : 'opacity-50'">{{ category }}</button>
+			</NuxtLink>
 		</div>
 
-		<p v-if="!filter">Please select a category.</p>
-		<div class="mb-12" v-else>
+		<div class="mb-12">
+			<p class="text-center opacity-25 mt-2 text-sm">{{ projects.filter((x) => x.category === filter).length }} projects listed</p>
+
 			<div v-for="project in projects.filter((x) => x.category === filter)" :key="project.name" class="my-8">
 				<p class="opacity-50 text-sm">{{ project.description }}</p>
 
@@ -27,12 +27,6 @@
 				</div>
 			</div>
 		</div>
-
-		<p class="mt-12">https://berkinakkaya.itch.io/</p>
-
-		<a href="https://github.com/berkinakkaya" target="_blank" class="mt-10">
-			<VueFeather type="github" stroke="white" size="72" class="draw draw-delay-500"></VueFeather>
-		</a>
 	</NuxtLayout>
 </template>
 
@@ -45,43 +39,44 @@ export default {
 	}),
 	components: { VueFeather },
 	data: () => ({
-		filter: "",
+		filter: "Web",
+		filters: ["Games", "CLI", "Web", "NPM"],
 		projects: [
 			{
 				name: "Stay In The Shadows",
-				category: "Game",
-				description: "Stealth Mobile Game",
+				category: "Games",
+				description: "Stealth Mobile Games",
 				technologies: ["Unity", "C#"],
 				githubLink: null,
 				liveLink: "https://play.google.com/store/apps/details?id=com.BerkinAkkaya.StayintheShadows",
 			},
 			{
 				name: "Split",
-				category: "Game",
-				description: "An Endless Mobile Game",
+				category: "Games",
+				description: "An Endless Mobile Games",
 				technologies: ["Unity", "C#"],
 				githubLink: "https://github.com/BerkinAKKAYA/Split",
 				liveLink: "https://play.google.com/store/apps/details?id=com.BerkinAkkaya.Split",
 			},
 			{
 				name: "Jumpy",
-				category: "Game",
-				description: "Hypercasual Climbing Game",
+				category: "Games",
+				description: "Hypercasual Climbing Games",
 				technologies: ["Unity", "C#"],
 				githubLink: "https://github.com/BerkinAKKAYA/Jumpy",
 				liveLink: "https://play.google.com/store/apps/details?id=com.BerkinAkkaya.Jumpy",
 			},
 			{
 				name: "Pete",
-				category: "Game",
-				description: "Platformer Game",
+				category: "Games",
+				description: "Platformer Games",
 				technologies: ["Unity", "C#"],
 				githubLink: null,
 				liveLink: "https://berkinakkaya.itch.io/pete",
 			},
 			{
 				name: "Keep It That Way",
-				category: "Game",
+				category: "Games",
 				description: "Ludum Dare Application",
 				technologies: ["Unity", "C#"],
 				githubLink: null,
@@ -194,11 +189,16 @@ export default {
 	}),
 	watch: {
 		"$route.query.filter": function (filter) {
-			this.filter = filter;
+			this.filter = this.filters.includes(filter) ? filter : "Web";
 		},
 	},
 	created() {
-		this.filter = this.$route.query.filter;
+		const filter = this.$route.query.filter;
+		if (filter && this.filters.includes(filter)) {
+			this.filter = filter;
+		} else {
+			this.$router.push("/work");
+		}
 	},
 };
 </script>
@@ -210,20 +210,13 @@ export default {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-bottom: 16px;
+	border-block: 1px solid rgba($color: #fff, $alpha: 0.4);
 
 	button {
 		white-space: nowrap;
-		padding: 8px 16px;
+		padding: 16px;
 		margin: 0 8px;
-		border-radius: 8px;
-		background: white;
-		color: black;
+		color: white;
 	}
-}
-
-td {
-	padding: 4px 20px;
-	text-align: left;
 }
 </style>
