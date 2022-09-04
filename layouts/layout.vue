@@ -6,7 +6,9 @@
 			<slot />
 		</main>
 
-		<footer class="text-center my-20">Inspired by <a href="https://brittanychiang.com/" target="_blank">Brittany Chiang</a>'s portfolio.</footer>
+		<footer class="text-center my-20 reveal" style="animation-delay: 2s">
+			Inspired by <a href="https://brittanychiang.com/" target="_blank">Brittany Chiang</a>'s portfolio.
+		</footer>
 	</div>
 </template>
 
