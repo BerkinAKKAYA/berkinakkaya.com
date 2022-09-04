@@ -84,4 +84,8 @@ export default {
 		stroke: white;
 	}
 }
+
+.about-text {
+	color: #8892b0;
+}
 </style>
