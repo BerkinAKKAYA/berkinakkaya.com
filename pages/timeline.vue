@@ -73,72 +73,38 @@
 			<h1 class="text-2xl page-header reveal">My Timeline</h1>
 			<p class="mt-3 mb-12 text-sm text-gray-500 reveal" style="animation-delay: 0.4s">Big events in my life, my works, studies and experiences...</p>
 
-			<div class="mt-10 timeline-element reveal" v-for="(experience, i) in experiences" :key="i" :style="'animation-delay: ' + (0.8 + i * 0.3) + 's'">
+			<div class="mt-10 timeline-element reveal" v-for="(event, i) in events" :key="i" :style="'animation-delay: ' + (0.8 + i * 0.3) + 's'">
 				<div class="year">
 					<b>
-						<small v-if="experience.month">
-							{{ months[experience.month - 1] }}
+						<small v-if="event.month">
+							{{ months[event.month - 1] }}
 						</small>
 
-						{{ experience.year }}
+						{{ event.year }}
 					</b>
 
-					<small class="opacity-50">Age of {{ experience.year - 2001 }}</small>
+					<small class="opacity-50">Age of {{ event.year - 2001 }}</small>
 				</div>
 
 				<div class="seperator"></div>
 
-				<p v-html="experience.content"></p>
+				<p v-html="event.content"></p>
 			</div>
 		</div>
 	</NuxtLayout>
 </template>
 
 <script>
+import Events from "~~/constants/timeline-events";
+import Months from "~~/constants/months";
+
 export default {
 	head: () => ({
 		title: "Experiences | Berkin Akkaya",
 	}),
 	data: () => ({
-		months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-		experiences: [
-			{
-				year: 2017,
-				month: null,
-				content: "I quitted high school at 10th grade.",
-			},
-			{
-				year: 2018,
-				month: null,
-				content: "Joined <a class='link' href='https://ldjam.com/users/berkin/games'>Ludum Dare</a> events. Built video games by myself and worked with teams.",
-			},
-			{
-				year: 2019,
-				month: 6,
-				content: "Started studying <b>Information Security</b> at <b>Istanbul Gedik University</b>.",
-			},
-			{
-				year: 2019,
-				month: 7,
-				content:
-					"Published my first game in <a class='link' href='https://play.google.com/store/apps/developer?id=Berkin+Akkaya' target='_blank'>Google Play</a>.",
-			},
-			{
-				year: 2019,
-				month: 8,
-				content: "Completed my internship at <b>Gedik Holding</b>.",
-			},
-			{
-				year: 2020,
-				month: 4,
-				content: "I started working at <b>Gedik Holding</b> as a <b>Front-End Developer</b>.",
-			},
-			{
-				year: 2022,
-				month: 6,
-				content: "Started working at Trendyol Group.",
-			},
-		],
+		months: Months,
+		events: Events,
 	}),
 };
 </script>

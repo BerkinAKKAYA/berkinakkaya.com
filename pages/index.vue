@@ -8,9 +8,9 @@
 				</h1>
 
 				<p class="text-lg about-text mb-2 reveal" style="animation-delay: 1s">
-					I am a <b class="color-secondary">Front-End Developer</b>. I also developed <NuxtLink to="/work?filter=games">mobile games</NuxtLink>,
-					<NuxtLink to="/work?filter=npm">npm packages</NuxtLink> and
-					<NuxtLink to="/work?filter=cli">cli tools</NuxtLink>
+					I am a <b class="color-secondary">Front-End Developer</b>. I also developed <NuxtLink to="/projects?filter=games">mobile games</NuxtLink>,
+					<NuxtLink to="/projects?filter=npm">npm packages</NuxtLink> and
+					<NuxtLink to="/projects?filter=cli">cli tools</NuxtLink>
 					before.
 				</p>
 
