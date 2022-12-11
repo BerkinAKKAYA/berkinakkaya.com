@@ -1,13 +1,5 @@
 export default {
-	typescript: { shim: false },
 	modules: ["@nuxtjs/tailwindcss"],
-	vite: {
-		server: {
-			watch: {
-				usePolling: true,
-			},
-		},
-	},
 	app: {
 		head: {
 			link: [
