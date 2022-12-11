@@ -43,7 +43,7 @@
 
 <script>
 import VueFeather from "vue-feather";
-import Projects from "~~/constants/projects";
+import Projects from "~~/content/projects";
 
 export default {
 	head: () => ({

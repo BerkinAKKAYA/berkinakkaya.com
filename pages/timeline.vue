@@ -95,8 +95,8 @@
 </template>
 
 <script>
-import Events from "~~/constants/timeline-events";
-import Months from "~~/constants/months";
+import Events from "~~/content/timeline-events";
+import Months from "~~/content/months";
 
 export default {
 	head: () => ({
