@@ -7,13 +7,6 @@ export default {
 				usePolling: true,
 			},
 		},
-		css: {
-			preprocessorOptions: {
-				scss: {
-					additionalData: '@import "@/layouts/global.scss";',
-				},
-			},
-		},
 	},
 	app: {
 		head: {

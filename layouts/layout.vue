@@ -17,6 +17,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./global.scss";
+
 main {
 	place-items: center;
 	width: 600px;
