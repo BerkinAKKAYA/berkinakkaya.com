@@ -1,3 +1,45 @@
+<template>
+	<div class="holder">
+		<h1 class="text-2xl page-header reveal">My Timeline</h1>
+		<p class="mt-3 mb-12 text-sm text-gray-500 reveal" style="animation-delay: 0.4s">Big events in my life, my works, studies and experiences...</p>
+
+		<div class="mt-10 timeline-element reveal" v-for="(event, i) in events" :key="i" :style="'animation-delay: ' + (0.8 + i * 0.3) + 's'">
+			<div class="year">
+				<b>
+					<small v-if="event.month">
+						{{ months[event.month - 1] }}
+					</small>
+
+					{{ event.year }}
+				</b>
+
+				<small class="opacity-50">Age of {{ event.year - 2001 }}</small>
+			</div>
+
+			<div class="seperator"></div>
+
+			<p v-html="event.content"></p>
+		</div>
+	</div>
+</template>
+
+<script>
+import Events from "~~/content/timeline-events";
+import Months from "~~/content/months";
+
+definePageMeta({ layout: "main" });
+
+export default {
+	head: () => ({
+		title: "Experiences | Berkin Akkaya",
+	}),
+	data: () => ({
+		months: Months,
+		events: Events,
+	}),
+};
+</script>
+
 <style lang="scss">
 .holder {
 	--offset: 30px;
@@ -66,45 +108,3 @@
 	}
 }
 </style>
-
-<template>
-	<NuxtLayout name="layout">
-		<div class="holder">
-			<h1 class="text-2xl page-header reveal">My Timeline</h1>
-			<p class="mt-3 mb-12 text-sm text-gray-500 reveal" style="animation-delay: 0.4s">Big events in my life, my works, studies and experiences...</p>
-
-			<div class="mt-10 timeline-element reveal" v-for="(event, i) in events" :key="i" :style="'animation-delay: ' + (0.8 + i * 0.3) + 's'">
-				<div class="year">
-					<b>
-						<small v-if="event.month">
-							{{ months[event.month - 1] }}
-						</small>
-
-						{{ event.year }}
-					</b>
-
-					<small class="opacity-50">Age of {{ event.year - 2001 }}</small>
-				</div>
-
-				<div class="seperator"></div>
-
-				<p v-html="event.content"></p>
-			</div>
-		</div>
-	</NuxtLayout>
-</template>
-
-<script>
-import Events from "~~/content/timeline-events";
-import Months from "~~/content/months";
-
-export default {
-	head: () => ({
-		title: "Experiences | Berkin Akkaya",
-	}),
-	data: () => ({
-		months: Months,
-		events: Events,
-	}),
-};
-</script>

@@ -2,7 +2,7 @@
 	<div>
 		<Header />
 
-		<main class="grid mt-20 mx-auto">
+		<main class="grid mt-20 mx-auto" id="main_holder">
 			<slot />
 		</main>
 	</div>
@@ -19,17 +19,9 @@ export default {
 <style lang="scss">
 @import "./global.scss";
 
-main {
+#main_holder {
 	place-items: center;
 	width: 600px;
 	max-width: 90vw;
-}
-
-footer {
-	color: rgba($color: #fff, $alpha: 0.7);
-
-	a {
-		color: #66ffdb;
-	}
 }
 </style>

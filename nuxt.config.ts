@@ -1,5 +1,6 @@
 export default {
-	modules: ["@nuxtjs/tailwindcss"],
+	ssr: false,
+	modules: ["@nuxtjs/tailwindcss", "@nuxt/content"],
 	app: {
 		head: {
 			link: [
