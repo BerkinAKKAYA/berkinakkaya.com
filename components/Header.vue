@@ -138,7 +138,7 @@ export default {
 		navItems: [
 			{ route: "/", name: "index", text: "Home" },
 			{ route: "/about", name: "about", text: "About Me" },
-			{ route: "/timeline", name: "timeline", text: "My Timeline" },
+			{ route: "/timeline", name: "timeline", text: "Timeline" },
 			{ route: "/projects", name: "projects", text: "Projects" },
 			{ route: "/contact", name: "contact", text: "Contact" },
 			{ route: "/blog", name: "blog", text: "Blog" },

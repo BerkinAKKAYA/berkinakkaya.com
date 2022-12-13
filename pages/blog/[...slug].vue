@@ -1,5 +1,5 @@
 <template>
-	<main class="markdown-body">
+	<main class="blog-post-body">
 		<ContentDoc />
 	</main>
 </template>

@@ -1,4 +1,6 @@
 <template>
+	<Head><Title>Projects | Berkin Akkaya</Title></Head>
+
 	<div class="category-navigation mb-4">
 		<NuxtLink v-for="(category, i) in filters" :key="category" :to="'/projects?filter=' + category" class="reveal" :style="'animation-delay: ' + i * 0.2 + 's'">
 			<button :class="filter === category ? 'opacity-100' : 'opacity-50'">{{ category }}</button>
@@ -40,9 +42,6 @@ import Projects from "~~/content/projects";
 definePageMeta({ layout: "main" });
 
 export default {
-	head: () => ({
-		title: "Projects | Berkin Akkaya",
-	}),
 	components: { VueFeather },
 	data: () => ({
 		filter: "Web",

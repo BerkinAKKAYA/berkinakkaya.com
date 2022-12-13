@@ -1,4 +1,6 @@
 <template>
+	<Head><Title>Home | Berkin Akkaya</Title></Head>
+
 	<div id="hero" class="text-center sm:text-left sm:ml-10 md:ml-20">
 		<div class="inner">
 			<small class="text-lg opacity-75 color-secondary reveal" style="animation-delay: 0.1s">Hi, I Am</small>
@@ -34,9 +36,6 @@ import VueFeather from "vue-feather";
 definePageMeta({ layout: "main" });
 
 export default {
-	head: () => ({
-		title: "Berkin Akkaya",
-	}),
 	components: { VueFeather },
 };
 </script>

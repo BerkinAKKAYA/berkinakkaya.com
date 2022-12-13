@@ -1,4 +1,6 @@
 <template>
+	<Head><Title>About | Berkin Akkaya</Title></Head>
+
 	<div>
 		<h1 class="text-2xl page-header reveal"><b>About Me</b></h1>
 
@@ -15,10 +17,4 @@
 
 <script>
 definePageMeta({ layout: "main" });
-
-export default {
-	head: () => ({
-		title: "About | Berkin Akkaya",
-	}),
-};
 </script>

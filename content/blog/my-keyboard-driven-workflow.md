@@ -1,4 +1,4 @@
-# Keyboard Driven Workflow
+# My Keyboard Driven Workflow
 
 While browsing the web or editing a text, using your keyboard instead of the mouse is always faster. Almost everyone use Control + C shortcut instead of right clicking and then pressing Copy button via mouse. There are tons of shortcuts like that and i think it’s essential to use them for every computer user.
 
