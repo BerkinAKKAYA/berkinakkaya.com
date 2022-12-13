@@ -73,15 +73,15 @@ export default {
 		}
 
 		.post-date {
-			font-size: 0.9em;
+			font-size: 0.8em;
 			opacity: 0.6;
 		}
 
 		.post-title {
-			font-size: 1.4em;
+			font-size: 1.2em;
 
 			@media (max-width: 800px) {
-				font-size: 1.2em;
+				font-size: 1em;
 			}
 		}
 
