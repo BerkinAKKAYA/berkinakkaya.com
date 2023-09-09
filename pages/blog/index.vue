@@ -3,7 +3,7 @@
 
 	<div id="blog_posts" :class="mouseHovering ? 'hovering-a-post' : ''">
 		<a
-			v-for="post in POSTS"
+			v-for="post in POSTS.filter((x) => !x.hide).sort((a, b) => b.date - a.date)"
 			class="post-holder"
 			:class="mouseHovering === post.slug ? 'hovering' : ''"
 			:href="`/blog/${post.slug}`"

@@ -115,8 +115,16 @@ nav a {
 	</header>
 
 	<nav class="justify-center items-center gap-10 mt-10 hidden md:flex">
-		<NuxtLink v-for="item in navItems" :key="item.name" :class="{ active: $route.name == item.name }" :to="item.route">
+		<NuxtLink
+			v-for="item in navItems"
+			:key="item.name"
+			class="relative"
+			:class="{ active: $route.name == item.name }"
+			:to="item.route"
+			:target="item.external ? '_blank' : ''"
+		>
 			{{ item.text }}
+			<VueFeather type="external-link" stroke="white" size="16" v-if="item.external" class="absolute -right-5 -top-1"></VueFeather>
 		</NuxtLink>
 	</nav>
 
@@ -141,8 +149,14 @@ export default {
 			{ route: "/timeline", name: "timeline", text: "Timeline" },
 			{ route: "/projects", name: "projects", text: "Projects" },
 			{ route: "/contact", name: "contact", text: "Contact" },
-			{ route: "/blog", name: "blog", text: "Blog" },
+			{ route: "https://medium.com/@berkinakkaya", name: "blog", text: "Blog", external: true },
 		],
 	}),
 };
 </script>
+
+<style>
+.feather {
+	stroke: white !important;
+}
+</style>

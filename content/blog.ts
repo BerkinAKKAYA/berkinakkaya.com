@@ -1,4 +1,12 @@
-export default [
+type BlogPost = {
+	slug: string;
+	title: string;
+	date: Date;
+	tags: string[];
+	hide?: boolean;
+};
+
+const BlogPosts: BlogPost[] = [
 	{
 		slug: "useful-bash-aliases",
 		title: "Useful Bash Aliases",
@@ -36,3 +44,5 @@ export default [
 		tags: ["Linux"],
 	},
 ];
+
+export default BlogPosts;

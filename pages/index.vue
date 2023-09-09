@@ -9,10 +9,8 @@
 			</h1>
 
 			<p class="text-lg about-text mb-2 reveal" style="animation-delay: 1s">
-				I am a <b class="color-secondary">Front-End Developer</b>. I also developed <NuxtLink to="/projects?filter=games">mobile games</NuxtLink>,
-				<NuxtLink to="/projects?filter=npm">npm packages</NuxtLink> and
-				<NuxtLink to="/projects?filter=cli">cli tools</NuxtLink>
-				before.
+				I am a <b class="color-secondary">Developer</b>, see my <NuxtLink to="/projects?filter=games">mobile games</NuxtLink>,
+				<NuxtLink to="/projects?filter=npm">npm packages</NuxtLink> and <NuxtLink to="/projects?filter=cli">cli tools</NuxtLink>
 			</p>
 
 			<div class="mt-12 flex gap-8 justify-center sm:gap-12 sm:justify-start flex-wrap">
