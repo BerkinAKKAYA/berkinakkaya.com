@@ -104,7 +104,7 @@ nav a {
 	<header class="flex flex-wrap items-center justify-between px-8 pt-12 sm:px-12 md:px-16">
 		<NuxtLink to="/" class="text-lg text-left md:w-full md:text-center md:text-xl">
 			<b>berkinakkaya</b>
-			<span class="opacity-25">.dev</span>
+			<span class="opacity-25">.com</span>
 		</NuxtLink>
 
 		<div id="menu_icon" class="md:hidden" @click="showMobileMenu = !showMobileMenu" :class="{ open: showMobileMenu }">

@@ -129,12 +129,12 @@ const Projects: Project[] = [
 		liveLink: "https://prisma-blog-flame.vercel.app",
 	},
 	{
-		name: "berkinakkaya.dev",
+		name: "berkinakkaya.com",
 		category: "Web",
 		description: "This Website",
 		technologies: ["Vue", "Tailwind"],
-		githubLink: "https://github.com/BerkinAKKAYA/berkinakkaya.dev",
-		liveLink: "https://berkinakkaya.dev",
+		githubLink: "https://github.com/BerkinAKKAYA/berkinakkaya.com",
+		liveLink: "https://berkinakkaya.com",
 	},
 	{
 		name: "Svelte Text Scramble",
