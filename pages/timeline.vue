@@ -34,7 +34,7 @@ definePageMeta({ layout: "main" });
 export default {
 	data: () => ({
 		monthNames: MonthNames,
-		events: Events,
+		events: Events.sort((a,b) => b.year - a.year),
 	}),
 };
 </script>
