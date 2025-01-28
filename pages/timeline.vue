@@ -3,9 +3,9 @@
 
 	<div class="holder">
 		<h1 class="text-2xl page-header reveal">Timeline</h1>
-		<p class="mt-3 mb-12 text-sm text-gray-500 reveal" style="animation-delay: 0.4s">Big events in my life, my works, studies and experiences...</p>
+		<p class="mt-3 mb-12 text-sm text-gray-500 reveal" style="animation-delay: 0.2s">Big events in my life, my works, studies and experiences...</p>
 
-		<div class="mt-10 timeline-element reveal" v-for="(event, i) in events" :key="i" :style="'animation-delay: ' + (0.8 + i * 0.3) + 's'">
+		<div class="mt-10 timeline-element reveal" v-for="(event, i) in events" :key="i" :style="'animation-delay: ' + (0.2 + i * 0.2) + 's'">
 			<div class="year">
 				<b>
 					<small v-if="event.month">
@@ -34,7 +34,7 @@ definePageMeta({ layout: "main" });
 export default {
 	data: () => ({
 		monthNames: MonthNames,
-		events: Events.sort((a,b) => b.year - a.year),
+		events: Events.sort((a, b) => b.year - a.year),
 	}),
 };
 </script>

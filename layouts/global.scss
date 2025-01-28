@@ -96,15 +96,11 @@ a.link {
 		stroke-dashoffset: 0;
 	}
 }
-
-.draw-delay-500 svg {
-	animation-delay: 800ms;
+.draw-delay-1 svg {
+	animation-delay: 500ms;
 }
-.draw-delay-1000 svg {
-	animation-delay: 1600ms;
-}
-.draw-delay-1500 svg {
-	animation-delay: 2400ms;
+.draw-delay-2 svg {
+	animation-delay: 1200ms;
 }
 
 .reveal {

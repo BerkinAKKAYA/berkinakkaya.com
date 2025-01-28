@@ -13,15 +13,12 @@
 				<NuxtLink to="/projects?filter=npm">npm packages</NuxtLink> and <NuxtLink to="/projects?filter=cli">cli tools</NuxtLink>
 			</p>
 
-			<div class="mt-12 flex gap-8 justify-center sm:gap-12 sm:justify-start flex-wrap">
+			<div class="mt-12 flex gap-8 justify-center sm:justify-start flex-wrap">
 				<a href="https://github.com/berkinakkaya" target="_blank">
-					<VueFeather type="github" stroke="white" size="52" class="draw draw-delay-500"></VueFeather>
-				</a>
-				<a href="https://twitter.com/berkinakkaya" target="_blank">
-					<VueFeather type="twitter" stroke="white" size="52" class="draw draw-delay-1000"></VueFeather>
+					<VueFeather type="github" stroke="white" size="52" class="draw draw-delay-1"></VueFeather>
 				</a>
 				<a href="https://linkedin.com/in/berkinakkaya" target="_blank">
-					<VueFeather type="linkedin" stroke="white" size="52" class="draw draw-delay-1500"></VueFeather>
+					<VueFeather type="linkedin" stroke="white" size="52" class="draw draw-delay-2"></VueFeather>
 				</a>
 			</div>
 		</div>
@@ -78,7 +75,7 @@ export default {
 	transition: 0.5s ease;
 
 	&:hover {
-		stroke-width: 1.2;
+		stroke-width: 1.5;
 		stroke: white;
 	}
 }
